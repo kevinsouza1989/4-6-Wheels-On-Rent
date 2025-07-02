@@ -1,2 +1,2 @@
 # MBA Walla 4-6-Wheels-On-Rent
-Feel at home in our Wheels 
+Feel at home on our Wheels 
