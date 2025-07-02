@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Goa Cab Rentals</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background-color: #1e88e5;
+      color: white;
+      padding: 1em;
+      text-align: center;
+    }
+    nav {
+      background-color: #1565c0;
+      display: flex;
+      justify-content: center;
+      padding: 0.5em 0;
+    }
+    nav a {
+      color: white;
+      margin: 0 1em;
+      text-decoration: none;
+    }
+    section {
+      padding: 2em;
+      background: white;
+      margin: 1em;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .fleet img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 1em;
+    }
+    footer {
+      background: #1e88e5;
+      color: white;
+      text-align: center;
+      padding: 1em;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+    .button {
+      background-color: #43a047;
+      color: white;
+      padding: 0.8em 1.5em;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .booking-form input, .booking-form textarea {
+      width: 100%;
+      padding: 0.5em;
+      margin: 0.5em 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .booking-form button {
+      background: #1e88e5;
+      color: white;
+      padding: 0.7em 2em;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .floating-buttons {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 1000;
+    }
+    .floating-buttons a {
+      background: #25d366;
+      color: white;
+      padding: 12px 18px;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: bold;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+    .floating-buttons a.call {
+      background: #1e88e5;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Goa Cab Rentals</h1>
+    <p>Reliable | Affordable | 24x7 Service</p>
+  </header>
+
+  <nav>
+    <a href="#fleet">Fleet</a>
+    <a href="#tariff">Tariff</a>
+    <a href="#booking">Book Now</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="fleet" class="fleet">
+    <h2>Our Fleet</h2>
+    <p>Available vehicles on a per-day basis (not 24-hour system):</p>
+    <ul>
+      <li><strong>4 Seater Manual:</strong> ₹1300 per day</li>
+      <li><strong>4 Seater Automatic:</strong> ₹1500 per day</li>
+      <li><strong>6 Seater Manual:</strong> ₹2500 per day</li>
+      <li><strong>Innova Automatic:</strong> ₹3700 per day</li>
+      <li><strong>Thar Automatic:</strong> ₹3700 per day</li>
+      <li><strong>Thar Manual:</strong> ₹3300 per day</li>
+    </ul>
+    <p><strong>Delivery Charges:</strong></p>
+    <ul>
+      <li>Mopa Airport: ₹1000 per car (one way)</li>
+      <li>Dabolim Airport: ₹500 per car (one way)</li>
+    </ul>
+    <p><strong>Pick-Up Charges:</strong></p>
+    <ul>
+      <li>Mopa Airport: ₹1000 per car (one way)</li>
+      <li>Dabolim Airport: ₹500 per car (one way)</li>
+    </ul>
+    <p><strong>Security Deposit:</strong> ₹3000 per car (refundable at pick-up)</p>
+    <p><strong>Note:</strong> Vehicles to be used within Goa only. For interstate use, applicable tolls and taxes must be paid in advance.</p>
+  </section>
+
+  <section id="tariff">
+    <h2>Tariff Summary</h2>
+    <p>All prices are on a per-day basis:</p>
+    <ul>
+      <li>4 Seater Manual - ₹1300</li>
+      <li>4 Seater Automatic - ₹1500</li>
+      <li>6 Seater Manual - ₹2500</li>
+      <li>Innova Automatic - ₹3700</li>
+      <li>Thar Automatic - ₹3700</li>
+      <li>Thar Manual - ₹3300</li>
+    </ul>
+    <p>Delivery/Pick-Up Charges:</p>
+    <ul>
+      <li>Mopa: ₹1000 per way</li>
+      <li>Dabolim: ₹500 per way</li>
+    </ul>
+    <p>Security Deposit: ₹3000 (refundable)</p>
+    <p>Out-of-Goa usage requires prepayment of interstate tolls/taxes.</p>
+  </section>
+
+  <section id="booking">
+    <h2>Book Your Cab</h2>
+    <form class="booking-form" action="https://formspree.io/f/xvoekrgy" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="tel" name="phone" placeholder="Contact Number" required>
+      <input type="text" name="pickup" placeholder="Pick-up Location" required>
+      <input type="text" name="drop" placeholder="Drop Location" required>
+      <input type="date" name="date" required>
+      <input type="time" name="time" required>
+      <textarea name="info" placeholder="Vehicle Type / Additional Info"></textarea>
+      <button type="submit">Submit Booking</button>
+    </form>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p><strong>Phone:</strong> <a href="tel:+919049443934">+91-9049443934</a></p>
+    <p><strong>WhatsApp:</strong> <a href="https://wa.me/919049443934">Message us on WhatsApp</a></p>
+    <p><strong>Email:</strong> kevinsouza1989@hotmail.com</p>
+    <p><strong>Address:</strong> Margao, Goa</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Goa Cab Rentals. All rights reserved.</p>
+  </footer>
+
+  <div class="floating-buttons">
+    <a class="call" href="tel:+919049443934">📞 Call Now</a>
+    <a href="https://wa.me/919049443934?text=Hi%2C%20I%20would%20like%20to%20book%20a%20cab%20from%20your%20service." target="_blank">💬 WhatsApp</a>
+  </div>
+</body>
+</html>
